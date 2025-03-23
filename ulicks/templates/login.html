@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+{% load static %}
+<!-- content -->
+<section>
+    
+    <div class="flex min-h-screen justify-center items-center bg-gray-100">
+
+
+        <!-- Login Container -->
+        <div class="flex bg-[#E9E0DE] rounded-2xl items-center shadow-lg max-w-3xl py-5">
+
+            <!-- Login form -->
+            <div class="flex flex-col gap-6 px-16 md:w-1/2">
+
+                <h2 class="font-bold text-2xl text-[#6F88B3]">
+                    Sign in
+                </h2>
+                <p class="text-xs mt-2 text-[#6F88B3]">
+                    Existing customer, easily sign in.
+                </p>
+
+                <form action="" class="flex flex-col gap-2 border-0">
+                    <input class="p-2 mt-5 rounded-xl border" placeholder="Email" type="text" name="email">
+               
+                    <div class="relative">
+                        <input class="p-2 rounded-xl border w-full" placeholder="Password" type="password" name="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" 
+                                class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2" viewBox="0 0 16 16">
+                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                            </svg>
+                        </div>
+
+                    <button class="bg-[#6F88B3] rounded-xl text-white py-2 hover:scale-105 duration-200">
+                        Sign in
+                    </button>
+                </form>
+
+                <div class="grid grid-cols-3 items-center text-gray-400">
+                    <hr class="border-gray-400">
+                    <p class="text-center">OR</p>
+                    <hr class="border-gray-400">
+                </div>
+
+                <!-- sign in with Google -->
+                <!--
+                <button class="bg-white border flex justify-center items-center py-2 w-full rounded-xl gap-2 text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                        <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+                      </svg>
+                    Login with Google
+                </button>-->
+
+                
+                <div class="text-sm border-b py-2 text-[#6F88B3]">
+                    <a href="">Forgot password?</a>
+                </div>
+
+                <div class="text-xs flex justify-between items-center text-[#6F88B3]">
+                    <p>Don't have an account?</p>
+                    <button class="py-2 px-5 bg-[#83AA64] rounded-xl text-white hover:scale-105 duration-200">
+                        Register</button>
+                </div>
+            </div>
+
+            <!-- image -->
+            <div class="md:block hidden w-1/2">
+                <img class="rounded-2xl  mr-2" src="{% static '/img/logincake.jpg' %}" alt="" width="330">
+            </div>
+                    
+        </div>
+    
+    </div>
+    
+</section>
+{% endblock %}

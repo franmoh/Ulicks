@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+{% load static %}
+<!-- content -->
+<section>
+    
+    <div class="flex min-h-screen justify-center items-center bg-red-50">
+
+
+        <!-- Registration Container -->
+        <div class="flex bg-red-100 rounded-2xl items-center shadow-2xl max-w-3xl p-5">
+
+            <!-- Registration form -->
+            <div class="flex flex-col gap-6 px-16 sm:w-1/2">
+                
+                <h2 class="font-bold text-2xl text-[#73270E]">
+                    Sign up
+                </h2>
+                <p class="text-xs mt-1 text-[#73270E]">
+                    New customer, easily sign up.
+                </p>
+
+                <form method="POST" action="" class="flex flex-col gap-4">
+                    {% csrf_token %}
+                    <input class="p-2 rounded-xl border" placeholder="Email" type="email" name="email">
+                
+                    <div class="relative">
+                        <input class="p-2 rounded-xl border w-full" placeholder="Password" type="password" name="password">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" 
+                            class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                        </svg>
+                    </div>
+                
+                    <div class="relative">
+                        <input class="p-2 rounded-xl border w-full" placeholder="Confirm Password" type="password2" name="password">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" 
+                        class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2" viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                    </svg>
+                    </div>
+                
+                    <button class="bg-[#73270E] rounded-xl text-white py-2 hover:scale-105 duration-200">
+                        Sign up
+                    </button>
+                </form>
+
+                <div class="grid grid-cols-3 items-center text-gray-400">
+                    <hr class="border-gray-400">
+                    <p class="text-center">OR</p>
+                    <hr class="border-gray-400">
+                </div>
+
+                <div class="text-xs flex justify-between items-center text-[#73270E]">
+                    <p>Already have an account?</p>
+                    <button class="py-2 px-3 bg-[#975B2E] rounded-xl text-white hover:scale-105 duration-200">
+                        Log in</button>
+                </div>
+            </div>
+
+            <!-- image -->
+            <div class="sm:block hidden w-1/2">
+                <img class="rounded-2xl" src="{% static '/img/regcake.jpg' %}" alt="" width="350">
+            </div>
+                    
+        </div>
+    
+    </div>
+    
+</section>
+{% endblock %}
